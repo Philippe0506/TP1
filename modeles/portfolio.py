@@ -93,7 +93,7 @@ class PortfolioSubject(Sujet):
             self.rafraichir()
 
 
-def modifier_titre(self, ticker: str, nouvelle_quantite=None, nouveau_seuil_bas=None, nouveau_seuil_haut=None):
+    def modifier_titre(self, ticker: str, nouvelle_quantite=None, nouveau_seuil_bas=None, nouveau_seuil_haut=None):
         ticker = ticker.strip().upper()
         if ticker not in self.titres:
             return
