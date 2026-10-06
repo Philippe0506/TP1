@@ -10,7 +10,7 @@ class CsvLoggerObserver(Observateur):
 
     def _initialiser_fichier(self) -> None:
         if not os.path.exists(self.fichier_csv):
-            with open(self.fichier_csv, "w") as f:
+            with open(self.fichier_csv, "w", encoding="utf-8") as f:
                 f.write("horodatage,valeur_totale,variation_globale,alertes\n")
 
     def actualiser(self, sujet) -> None:
@@ -28,5 +28,5 @@ class CsvLoggerObserver(Observateur):
         else:
             alertes = "Aucune alerte"
 
-        with open(self.fichier_csv, "a") as f:
+        with open(self.fichier_csv, "a", encoding="utf-8") as f:
             f.write(f"{horodatage},{valeur_totale:.2f},{variation_globale:.2f},{alertes}\n")
