@@ -1,5 +1,5 @@
 import os
-from observateur import Observateur
+from observateurs.observateur import Observateur
 
 
 class CsvLoggerObserver(Observateur):

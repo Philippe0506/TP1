@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from observateur import Observateur
+from observateurs.observateur import Observateur
 
 
 class PrixVue(Observateur):
